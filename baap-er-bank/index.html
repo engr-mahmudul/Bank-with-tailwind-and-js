@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tailwind CDN Link  -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl	text-center	mt-12">Welcome to <span
+                class="font-semibold text-yellow-600">Baap-Er-Bank</span></h1>
+    </header>
+    <main>
+        <section class="bg-green-100 w-3/4 mx-auto mt-8">
+            <h1 class="text-2xl	ml-3 mb-4">Log in here</h1>
+            <div>
+                <input id="email-field" class="border border-yellow-800 ml-3 w-3/4 block pl-3 mb-4 rounded text-xl" type="text"
+                    placeholder="Email">
+                <input id="password-field" class="border border-yellow-800 ml-3 w-3/4 block pl-3 mb-4 rounded text-xl" type="password"
+                    placeholder="Password">
+                <button id="submit-button" class="bg-yellow-600 ml-3 p-2 text-white font-semibold rounded mb-4">Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click',function(){
+            let emailField = document.getElementById('email-field');
+            let email = emailField.value;
+            let passwordField = document.getElementById('password-field');
+            let password = passwordField.value;
+            if(email == 'abc@gamil.com' && password == '12345'){
+                window.location.href = 'banking.html';
+                emailField.value = '';
+                passwordField.value = '';
+            }
+            else{
+                alert("Wrong Email or Password...!");
+                emailField.value = '';
+                passwordField.value = '';
+
+            }
+        })
+    </script>
+</body>
+
+</html>
